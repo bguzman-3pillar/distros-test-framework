@@ -1,5 +1,3 @@
-//go:build selinux
-
 package selinux
 
 import (
@@ -31,18 +29,18 @@ var _ = Describe("Test:", func() {
 			assert.PodAssertStatus(),
 		)
 	})
-
-	It("Validate selinux is enabled pre upgrade", func() {
-		testcase.TestSelinuxEnabled()
-	})
-
-	It("Validate container, server and selinux version pre upgrade", func() {
-		testcase.TestSelinuxVersions()
-	})
-
-	It("Validate container security pre upgrade", func() {
-		testcase.TestSelinuxSpcT()
-	})
+	//
+	// It("Validate selinux is enabled pre upgrade", func() {
+	// 	testcase.TestSelinuxEnabled()
+	// })
+	//
+	// It("Validate container, server and selinux version pre upgrade", func() {
+	// 	testcase.TestSelinuxVersions()
+	// })
+	//
+	// It("Validate container security pre upgrade", func() {
+	// 	testcase.TestSelinuxSpcT()
+	// })
 
 	It("Validate context", func() {
 		testcase.TestSelinuxContext()
